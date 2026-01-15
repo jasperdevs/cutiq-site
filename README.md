@@ -6,9 +6,9 @@
 </p>
 
 <p align="center">
-  <a href="https://appview.dev" style="margin-right: 20px;">
+  <a href="https://appview.dev">
     AppView Website
-  </a>
+  </a> •
   <a href="https://appview.dev/docs">
     Documentation
   </a>
