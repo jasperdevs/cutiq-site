@@ -117,7 +117,7 @@ export default function RootLayout({
                   // I'd appreciate if you leave this link here, but feel free to remove it, no hard feelings :)
                   <>
                     Website is built with{" "}
-                    <a href="https://appview.dev">AppView</a>
+                    <a target="_blank" href="https://appview.dev">AppView</a>
                   </>
                 }
               />

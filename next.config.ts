@@ -31,6 +31,7 @@ const nextConfig: NextConfig = {
       },
     },
   },
+  devIndicators: false,
 };
 
 const withMDX = createMDX({
