@@ -1,5 +1,3 @@
-# AppView
-
 <p align="center">
   <img src="./public/app_view/readme_logo_light.png#gh-light-mode-only" style="width: 100px; height: 100px;" alt="AppView logo" />
   <img src="./public/app_view/readme_logo_dark.png#gh-dark-mode-only" style="width: 100px; height: 100px;" alt="AppView logo" />
