@@ -67,7 +67,7 @@
     .title {
       font-size: 24px;
       line-height: 1.1;
-      font-weight: 800;
+      font-weight: 700;
 
       &.whimsical {
         font-size: 32px;
@@ -100,6 +100,19 @@
 
       &.trailing {
         padding: 30px 30px 30px 120px;
+      }
+
+      .title {
+        font-size: 24px;
+        font-weight: 700;
+
+        &.whimsical {
+          font-size: 44px;
+        }
+
+        &.cursive {
+          font-size: 42px;
+        }
       }
     }
   }
