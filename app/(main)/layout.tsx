@@ -106,6 +106,7 @@ export default function RootLayout({
                   {
                     label: "Terms of Use",
                     href: "https://www.apple.com/legal/internet-services/itunes/dev/stdeula/",
+                    external: true,
                   },
                   {
                     label: "Follow Updates",
@@ -117,7 +118,9 @@ export default function RootLayout({
                   // I'd appreciate if you leave this link here, but feel free to remove it, no hard feelings :)
                   <>
                     Website is built with{" "}
-                    <a target="_blank" href="https://appview.dev">AppView</a>
+                    <a target="_blank" href="https://appview.dev">
+                      AppView
+                    </a>
                   </>
                 }
               />
