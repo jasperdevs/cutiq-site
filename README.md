@@ -20,7 +20,10 @@ Hey 👋 As we're in a private repo, no need to be overly formal. First of all, 
 >
 > Took way longer to build this than I anticipated (story of my life tbh) but I'm happy with the final result and truly think it will save you a lot of time and headaches.
 
-If case you have feedback, questions, or need help with anything, email is the fastest way to get the reply: <a href="mailto:mykola@appview.dev">mykola@appview.dev</a>.
+If case you have feedback, questions, or need help with anything, email is the fastest way to reach me: <a href="mailto:mykola@appview.dev">mykola@appview.dev</a>.
+
+> [!TIP]
+> Once you launch your website built with AppView, <a href="mailto:mykola@appview.dev">please let me know</a>. I'm featuring a few examples on the [appview.dev](https://appview.dev) and giving shoutouts on my social media accounts.
 
 For bugs and feature requests, please create an issue in this repo.
 
