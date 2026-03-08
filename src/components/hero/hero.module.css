@@ -1,8 +1,10 @@
 .hero {
+	--media-min-height: 640px;
+
 	max-width: var(--base-width);
 	display: grid;
 	grid-template-columns: 1fr 310px;
-	grid-template-rows: 1fr;
+	grid-template-rows: minmax(var(--media-min-height), 1fr);
 	grid-template-areas: "content video";
 	gap: 80px;
 	padding: 0px 100px 0 60px;
@@ -54,7 +56,7 @@
 	grid-area: video;
 	width: 100%;
 	max-width: 310px;
-	min-height: 640px;
+	min-height: var(--media-min-height);
 }
 
 .badges {
@@ -69,7 +71,7 @@
 @container root (width < 768px) {
 	.hero {
 		grid-template-columns: 1fr;
-		grid-template-rows: auto auto;
+		grid-template-rows: auto minmax(var(--media-min-height), auto);
 		grid-template-areas:
 			"content"
 			"video";
