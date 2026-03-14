@@ -169,6 +169,7 @@ export default function RootLayout({
         </ThemeProvider>
 
         {/* <PlausibleAnalytics domain="your-app-domain.com" /> */}
+        {/* <TelemetryDeckAnalytics appID="your-telemetrydeck-app-id" clientUser="anonymous" /> */}
         {/* <VercelAnalytics /> */}
       </body>
     </html>
