@@ -9,7 +9,7 @@ export default function Page() {
       <Section paddingTop={80}>
         <Hero
           title="Stop guessing. Start knowing."
-          subtitle="Finally understand your hair. Get a real analysis, a routine that actually works, and see exactly how any style looks on you before you commit."
+          subtitle="AI hair analysis, personalized routines, and style previews on your own face."
           media={
             <Hero.Video
               src="/cutiq/hero-demo.mp4"
@@ -25,8 +25,8 @@ export default function Page() {
         <CardGrid rowHeight={440}>
           <CardGrid.StackedCard
             maxWidth="twoThirds"
-            title="The feedback your barber never gives you"
-            description="Four photos. One honest analysis. Your health score, face shape, what's working, what's not, and exactly what to do about it."
+            title="Your hair, analyzed"
+            description="Health score. Face shape. What to fix. What to keep."
             media={
               <CardGrid.StackedCard.Video
                 src="/cutiq/hero-demo.mp4"
@@ -40,14 +40,14 @@ export default function Page() {
           <CardGrid.IconCard
             maxWidth="third"
             iconName="target"
-            title="A plan that actually sticks"
-            description="No more random products. Get a weekly routine built from your analysis. Track it. Watch your score improve."
+            title="A routine that works"
+            description="Weekly plan. Built from your analysis. Track progress."
           />
 
           <CardGrid.StackedCard
             maxWidth="third"
-            title="See it on you first"
-            description="Try 30+ styles on your actual face. Not a model. Not a cartoon. You."
+            title="See it before you cut"
+            description="30+ styles on your face. Or type your own."
             media={
               <CardGrid.StackedCard.Video
                 src="/cutiq/app-demo.mp4"
@@ -60,8 +60,8 @@ export default function Page() {
 
           <CardGrid.StackedCard
             maxWidth="twoThirds"
-            title="Walk into the chair with confidence"
-            description="Save the styles you like. Compare them. Show your barber exactly what you want instead of hoping they get it right."
+            title="Show your barber, not guess"
+            description="Save looks. Compare them. Walk in with a plan."
             media={
               <CardGrid.StackedCard.Image
                 src="/cutiq/style-side-part.jpg"
@@ -79,22 +79,22 @@ export default function Page() {
           <CardGrid.IconCard
             maxWidth="third"
             iconName="send"
-            title="Like having a stylist on call"
-            description="Ask the AI about products, your routine, or whether that fade is right for your face shape."
+            title="Stylist on call"
+            description="AI chat that knows your hair."
           />
 
           <CardGrid.IconCard
             maxWidth="third"
             iconName="lock"
-            title="No sign-up. Just open it."
-            description="Works with your iCloud. No email, no password, no friction."
+            title="No sign-up"
+            description="iCloud. No email. No password."
           />
 
           <CardGrid.IconCard
             maxWidth="third"
             iconName="check_circle"
-            title="Your photos stay yours"
-            description="Nothing stored on our servers. Everything syncs through your personal iCloud."
+            title="Your data"
+            description="Photos never leave your device."
           />
         </CardGrid>
       </Section>
