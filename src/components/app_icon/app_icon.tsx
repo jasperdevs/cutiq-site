@@ -2,7 +2,6 @@
 
 import { useTheme } from "@/hooks/useTheme";
 import { findSrcForTheme, withBasePath } from "@/lib/utils";
-import Image from "next/image";
 import { ImageSrcsetEntry } from "../../types/shared";
 import styles from "./app_icon.module.css";
 
@@ -14,8 +13,6 @@ interface AppIconProps {
   filter?: "none" | "grayscale";
 }
 
-const PLACEHOLDER_SRC = "/app_view/icon_placeholder.png";
-
 export function AppIcon({
   src,
   srcset,
@@ -25,22 +22,14 @@ export function AppIcon({
 }: AppIconProps) {
   const theme = useTheme();
 
-  /**
-   * The theme is null during static-site generation
-   */
   if (theme === null) {
     return null;
   }
 
   const targetSrc = findSrcForTheme(src, srcset, theme);
-  const accentBrandColor = getAccentBrandColor();
 
   let filterClassName;
-
   switch (filter) {
-    case "none":
-      filterClassName = "";
-      break;
     case "grayscale":
       filterClassName = styles.grayscale;
       break;
@@ -54,25 +43,13 @@ export function AppIcon({
         mask ? styles.mask : ""
       } ${filterClassName}`}
     >
-      <Image src={withBasePath(targetSrc)} alt="App Icon" width={size} height={size} />
-
-      {targetSrc === PLACEHOLDER_SRC &&
-        filter === "none" &&
-        accentBrandColor &&
-        !["OKLCH(0% 0 NONE)", "OKLCH(100% 0 NONE)"].includes(
-          accentBrandColor
-        ) && <div className={styles.tintOverlay}></div>}
+      <img
+        src={withBasePath(targetSrc)}
+        alt="App Icon"
+        width={size}
+        height={size}
+        style={{ display: "block" }}
+      />
     </figure>
   );
-}
-
-function getAccentBrandColor(): string {
-  if (typeof window === "undefined") {
-    return "";
-  }
-
-  return getComputedStyle(window.document.documentElement)
-    .getPropertyValue("--color-accent-brand")
-    .trim()
-    .toUpperCase();
 }
