@@ -11,9 +11,9 @@ import { ThemeProvider } from "@/providers/theme_provider";
 import "@/global.css";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://cutiq.app";
-const TITLE = "CutIQ - AI hair analysis and style previews";
+const TITLE = "CutIQ - Finally understand your hair";
 const DESCRIPTION =
-  "Analyze your hair from four angles, get a health score and routine, and preview any hairstyle on your own photo.";
+  "AI hair analysis, personalized routines, and realistic style previews on your own face. Stop guessing. Start knowing.";
 
 export const metadata: Metadata = {
   title: TITLE,

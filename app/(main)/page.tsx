@@ -8,8 +8,8 @@ export default function Page() {
     <>
       <Section paddingTop={80}>
         <Hero
-          title="Know your hair before you change it."
-          subtitle="Four angles. AI analysis. A health score, face shape read, personalized routine, and realistic style previews on your own photo."
+          title="Stop guessing. Start knowing."
+          subtitle="Finally understand your hair. Get a real analysis, a routine that actually works, and see exactly how any style looks on you before you commit."
           media={
             <Hero.Video
               src="/cutiq/hero-demo.mp4"
@@ -25,8 +25,8 @@ export default function Page() {
         <CardGrid rowHeight={440}>
           <CardGrid.StackedCard
             maxWidth="twoThirds"
-            title="Not a filter. An analysis."
-            description="Capture four angles of your hair. Get a health score, texture profile, face shape, and specific things to fix. The kind of feedback a good stylist would give you."
+            title="The feedback your barber never gives you"
+            description="Four photos. One honest analysis. Your health score, face shape, what's working, what's not, and exactly what to do about it."
             media={
               <CardGrid.StackedCard.Video
                 src="/cutiq/hero-demo.mp4"
@@ -40,14 +40,14 @@ export default function Page() {
           <CardGrid.IconCard
             maxWidth="third"
             iconName="target"
-            title="A routine, not a guess"
-            description="Your analysis generates a weekly schedule with products and timing. Check off tasks. Redo the analysis and it updates."
+            title="A plan that actually sticks"
+            description="No more random products. Get a weekly routine built from your analysis. Track it. Watch your score improve."
           />
 
           <CardGrid.StackedCard
             maxWidth="third"
-            title="Preview any style"
-            description="30+ styles or type your own. Every preview uses your actual photo, not a generic model."
+            title="See it on you first"
+            description="Try 30+ styles on your actual face. Not a model. Not a cartoon. You."
             media={
               <CardGrid.StackedCard.Video
                 src="/cutiq/app-demo.mp4"
@@ -60,8 +60,8 @@ export default function Page() {
 
           <CardGrid.StackedCard
             maxWidth="twoThirds"
-            title="Save it. Share it. Decide later."
-            description="Keep the looks you like. Compare them side by side. Send them to your barber."
+            title="Walk into the chair with confidence"
+            description="Save the styles you like. Compare them. Show your barber exactly what you want instead of hoping they get it right."
             media={
               <CardGrid.StackedCard.Image
                 src="/cutiq/style-side-part.jpg"
@@ -79,22 +79,22 @@ export default function Page() {
           <CardGrid.IconCard
             maxWidth="third"
             iconName="send"
-            title="Ask the AI"
-            description="Chat with an assistant that already knows your score, hair type, and routine."
+            title="Like having a stylist on call"
+            description="Ask the AI about products, your routine, or whether that fade is right for your face shape."
           />
 
           <CardGrid.IconCard
             maxWidth="third"
             iconName="lock"
-            title="No account"
-            description="Works with iCloud. No email, no password, no sign-up form."
+            title="No sign-up. Just open it."
+            description="Works with your iCloud. No email, no password, no friction."
           />
 
           <CardGrid.IconCard
             maxWidth="third"
             iconName="check_circle"
-            title="Private"
-            description="Photos never hit our servers. Your data syncs through your own iCloud."
+            title="Your photos stay yours"
+            description="Nothing stored on our servers. Everything syncs through your personal iCloud."
           />
         </CardGrid>
       </Section>
