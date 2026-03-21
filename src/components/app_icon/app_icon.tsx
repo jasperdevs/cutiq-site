@@ -1,7 +1,7 @@
 "use client";
 
 import { useTheme } from "@/hooks/useTheme";
-import { findSrcForTheme } from "@/lib/utils";
+import { findSrcForTheme, withBasePath } from "@/lib/utils";
 import Image from "next/image";
 import { ImageSrcsetEntry } from "../../types/shared";
 import styles from "./app_icon.module.css";
@@ -54,7 +54,7 @@ export function AppIcon({
         mask ? styles.mask : ""
       } ${filterClassName}`}
     >
-      <Image src={targetSrc} alt="App Icon" width={size} height={size} />
+      <Image src={withBasePath(targetSrc)} alt="App Icon" width={size} height={size} />
 
       {targetSrc === PLACEHOLDER_SRC &&
         filter === "none" &&

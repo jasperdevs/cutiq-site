@@ -74,6 +74,9 @@ export default function Page() {
             textAlignment="leading"
           />
 
+        </CardGrid>
+
+        <CardGrid rowHeight={240}>
           <CardGrid.IconCard
             maxWidth="third"
             iconName="send"

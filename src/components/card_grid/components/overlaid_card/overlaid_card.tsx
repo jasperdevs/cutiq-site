@@ -1,7 +1,7 @@
 "use client";
 
 import { useTheme } from "@/hooks/useTheme";
-import { buildClassNameForFontStyle, findSrcForTheme } from "@/lib/utils";
+import { buildClassNameForFontStyle, findSrcForTheme, withBasePath } from "@/lib/utils";
 import Image from "next/image";
 import { ReactEventHandler, useState } from "react";
 import type { FontStyle, ImageSrcsetEntry } from "../../../../types/shared";
@@ -117,7 +117,7 @@ function BackgroundImage({
 
   return (
     <Image
-      src={src}
+      src={withBasePath(src)}
       alt=""
       fill={true}
       style={{ objectFit: "cover" }}

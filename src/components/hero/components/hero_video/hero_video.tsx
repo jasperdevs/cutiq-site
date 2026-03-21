@@ -3,6 +3,7 @@
 import { Icon } from "@/components/icon/icon";
 import { useBezelVideoRenderer } from "@/hooks/useBezelVideoRenderer";
 import { DEVICE_BEZEL_CONFIGURATION_MAP } from "@/lib/device_bezel_configuration_map";
+import { withBasePath } from "@/lib/utils";
 import type { Bezel, ImageSrcsetEntry } from "@/types/shared";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
@@ -104,7 +105,7 @@ export function HeroVideo({ src, srcset, alt = "", bezel }: HeroVideoProps) {
         }
       >
         <Image
-          src="/app_view/iphone_shadow.png"
+          src={withBasePath("/app_view/iphone_shadow.png")}
           alt=""
           width={592}
           height={68}
@@ -114,7 +115,7 @@ export function HeroVideo({ src, srcset, alt = "", bezel }: HeroVideoProps) {
 
       <canvas ref={canvasRef} className={styles.videoCanvas} aria-label={alt} />
 
-      <div className={styles.controls}>
+      {false && <div className={styles.controls}>
         <button type="button" onClick={onFullScreenButtonClick}>
           <Icon name="open_in_full" size={14} />
         </button>
@@ -129,7 +130,7 @@ export function HeroVideo({ src, srcset, alt = "", bezel }: HeroVideoProps) {
             <Icon name="pause" size={14} />
           )}
         </button>
-      </div>
+      </div>}
     </div>
   );
 }

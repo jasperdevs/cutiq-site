@@ -2,6 +2,7 @@
 
 import { useBezelImageRenderer } from "@/hooks/useBezelImageRenderer";
 import { DEVICE_BEZEL_CONFIGURATION_MAP } from "@/lib/device_bezel_configuration_map";
+import { withBasePath } from "@/lib/utils";
 import type { Bezel, ImageSrcsetEntry } from "@/types/shared";
 import Image from "next/image";
 import { useRef } from "react";
@@ -37,7 +38,7 @@ export function HeroImage({ src, srcset, alt, bezel }: HeroImageProps) {
         }
       >
         <Image
-          src="/app_view/iphone_shadow.png"
+          src={withBasePath("/app_view/iphone_shadow.png")}
           alt=""
           width={592}
           height={68}
