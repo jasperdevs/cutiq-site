@@ -1,111 +1,105 @@
 ## Privacy Policy
 
-Apple requires every app to have a proper privacy policy that explains how user data is collected, used, and protected.
+Last updated: March 21, 2026
 
-Depending on your app you might just use a simple, one paragraph privacy policy describing what data is collected (if any) in human friendly terms. But for more complex case you might need a more and more formal language.
+CutIQ ("CutIQ," "we," "our," or "us") provides AI-powered hair analysis, hairstyle previews, routines, and chat-based hair guidance on iPhone. This Privacy Policy explains what information the app handles, how it is used, and what choices you have.
 
-AI chatbot of choice is your best friend here. Here is a prompt template, customize and give it to AI, it should produce a decent first draft that you can iterate on further:
+## Overview
 
-```
-You are a privacy-policy drafting assistant. Generate a clear, App Store–ready Privacy Policy for an iOS app.
+CutIQ is designed to help you analyze your hair, preview hairstyles, and track progress over time. To do that, the app uses a combination of on-device data, Apple's services, and our backend infrastructure. We do not sell your personal information and we do not use third-party advertising trackers inside the app.
 
-Constraints:
-- Output in plain English.
-- Use clear headings and short paragraphs.
-- Must match the data practices described below exactly (do not invent practices).
-- Include sections: Overview, Data We Collect, How We Use Data, Sharing, Third-Party Services, Data Retention, Security, Your Choices & Rights, Children’s Privacy, International Transfers, App Tracking Transparency, Push Notifications, Contact Us, Changes to This Policy.
-- Keep it suitable for a single webpage.
-- Ask follow up questions if any details are unclear.
+## Data We Collect
 
-APP INFORMATION
-- App name: [APP_NAME]
-- Company / Developer name: [DEVELOPER_NAME]
-- Website: [WEBSITE_URL]
-- Support email: [SUPPORT_EMAIL]
-- Countries/regions offered: [REGIONS] (e.g., “Worldwide” or list)
-- Target audience age: [AGE_RATING] (e.g., 4+, 12+, 17+)
+CutIQ may process the following categories of information:
 
-DATA COLLECTION SUMMARY (Apple “App Privacy” style)
-For each data type, specify: collected? (yes/no), linked to user? (yes/no), used for tracking? (yes/no), purposes.
-Use ONLY the items marked “yes”.
+- **Photos and image content.** If you take a photo in the app or choose one from your photo library, CutIQ uses that image to generate hairstyle previews or hair analysis results.
+- **Hair analysis and routine data.** The app stores your analysis results, routine preferences, streaks, settings, and related progress information.
+- **Identifiers.** CutIQ uses an iCloud / CloudKit-based user identity and app-specific identifiers needed for syncing data and verifying secure app requests.
+- **Purchase and subscription status.** If you subscribe, the app verifies whether you have an active entitlement through Apple in-app purchases.
+- **Usage-limiting and security metadata.** Our backend may process limited request metadata needed for App Attest verification, subscription validation, abuse prevention, and rate limiting.
+- **Support communications.** If you email us, we receive the information you include in that message.
 
-Data types (fill each line):
-- Contact info (name, email, phone): collected [YES/NO]; linked [YES/NO]; tracking [YES/NO]; purposes: [PURPOSES]
-- Identifiers (user ID, device ID): collected [YES/NO]; linked [YES/NO]; tracking [YES/NO]; purposes: [PURPOSES]
-- Usage data (product interaction, diagnostics): collected [YES/NO]; linked [YES/NO]; tracking [YES/NO]; purposes: [PURPOSES]
-- Diagnostics (crash data, performance): collected [YES/NO]; linked [YES/NO]; tracking [YES/NO]; purposes: [PURPOSES]
-- Purchases (purchase history): collected [YES/NO]; linked [YES/NO]; tracking [YES/NO]; purposes: [PURPOSES]
-- Location (precise/approx): collected [YES/NO]; linked [YES/NO]; tracking [YES/NO]; purposes: [PURPOSES]
-- User content (photos, files, text): collected [YES/NO]; linked [YES/NO]; tracking [YES/NO]; purposes: [PURPOSES]
-- Health & fitness: collected [YES/NO]; linked [YES/NO]; tracking [YES/NO]; purposes: [PURPOSES]
-- Financial info: collected [YES/NO]; linked [YES/NO]; tracking [YES/NO]; purposes: [PURPOSES]
-- Other: [LIST_ANY_OTHER_APPLE_DATA_TYPES_USED]
+## How We Use Data
 
-TRACKING (App Tracking Transparency)
-- Do you track users across apps/sites owned by other companies? [YES/NO/UNKNOWN]
-- If YES: describe tracking data and partners: [DETAILS]
-- If NO: state that the app does not track as defined by Apple.
+We use data to:
 
-ACCOUNT & AUTH
-- Does the app have accounts? [YES/NO]
-- Sign-in methods: [Apple ID / Email+Password / Google / etc.]
-- If accounts exist: what profile fields are stored: [FIELDS]
-- Password handling (if applicable): [e.g., “handled by Firebase Auth” / “stored hashed” / “N/A”]
+- provide hairstyle generation, hair analysis, and chat features;
+- save your app state and progress across sessions;
+- sync your information through your personal iCloud / CloudKit storage where applicable;
+- verify subscriptions and secure app requests;
+- enforce usage limits and help prevent abuse;
+- improve reliability, troubleshoot issues, and respond to support requests.
 
-PAYMENTS
-- Monetization model: [Free / Paid / IAP / Subscriptions / Ads]
-- Payment processor(s): [Apple In-App Purchase / Stripe / etc.]
-- If using Apple IAP: confirm you do not receive full card details: [YES/NO/UNKNOWN]
+## Sharing
 
-THIRD-PARTY SDKs & SERVICES
-List every SDK/service and what data it receives.
-For each item include: name, provider, purpose, data types shared, whether linked/tracking, and link to provider privacy policy.
+We do not sell your personal information. We share data only as needed to operate the app, including with the service providers listed below, or when required by law.
 
-Third parties (fill as list):
-1) [SERVICE_NAME] by [PROVIDER] — purpose: [PURPOSE]
-   - Data shared: [DATA_TYPES]
-   - Linked: [YES/NO/UNKNOWN]
-   - Tracking: [YES/NO/UNKNOWN]
-   - Provider policy: [URL]
-2) …
+## Third-Party Services
 
-Common examples to consider (remove if unused):
-- Analytics: [Firebase Analytics / Amplitude / Mixpanel / NONE]
-- Crash reporting: [Crashlytics / Sentry / NONE]
-- Ads: [AdMob / Meta Audience Network / NONE]
-- Attribution: [AppsFlyer / Adjust / Branch / NONE]
-- Cloud sync: [CloudKit / Firebase / custom backend / NONE]
-- Payments: [Apple IAP / Stripe / NONE]
-- Customer support: [Intercom / Zendesk / email only / NONE]
-- Push notifications: [APNs only / OneSignal / Firebase Messaging / etc.]
-- Maps: [Apple Maps / Google Maps / NONE]
+CutIQ uses the following third-party and platform services:
 
-DATA STORAGE & RETENTION
-- Where is data stored? [On-device only / iCloud / CloudKit / Your servers / Vendor servers]
-- If on your servers: hosting provider and regions: [DETAILS]
-- Retention rules:
-  - Account data retained until: [e.g., deletion request / X days after inactivity / UNKNOWN]
-  - Logs/diagnostics retained for: [DURATION]
-  - Backups retained for: [DURATION]
-- Data deletion method:
-  - In-app deletion: [YES/NO]
-  - Email request: [YES/NO]
-  - Steps user must take: [DETAILS]
+1. **Apple CloudKit / iCloud** by Apple - used for syncing certain app data and account state.
+   - Data involved: profile and routine settings, analysis-related app state, progress data, and other app records you create.
+   - Apple privacy policy: [Apple privacy policy](https://www.apple.com/legal/privacy/)
 
-CHILDREN
-- Is the app directed to children under 13? [YES/NO]
-- If NO: state you do not knowingly collect data from children under 13.
-- If YES: describe parental consent flow and data limits: [DETAILS]
+2. **Apple In-App Purchase / App Store** by Apple - used to process subscriptions and provide purchase status.
+   - Data involved: transaction and subscription status metadata.
+   - We do not receive your full payment card information.
+   - Apple privacy policy: [Apple privacy policy](https://www.apple.com/legal/privacy/)
 
-SECURITY
-Describe security measures accurately:
-- Transport security: [HTTPS/TLS/ATS]
-- At-rest encryption: [YES/NO/UNKNOWN]
-- Access controls: [DETAILS/UNKNOWN]
+3. **Supabase** by Supabase, Inc. - used for backend edge functions that power secure app verification, hair analysis requests, hairstyle generation requests, and chat requests.
+   - Data involved: request payloads needed to fulfill those features, including image data you submit for analysis or generation, secure request verification metadata, and subscription verification metadata.
+   - Supabase privacy policy: [Supabase privacy policy](https://supabase.com/privacy)
 
-CONTACT
-- Privacy contact email: [PRIVACY_EMAIL or SUPPORT_EMAIL]
-- Mailing address (optional): [ADDRESS or NONE]
+4. **Superwall** by Superwall - used to manage paywall presentation and entitlement handling.
+   - Data involved: app-specific user identifiers and subscription / entitlement state needed to determine access.
+   - Superwall privacy policy: [Superwall privacy policy](https://superwall.com/privacy)
 
-Now generate the full Privacy Policy.
-```
+5. **ModelRouter / AI model providers accessed through our backend** - used to produce hair analysis, hairstyle generation, and chat responses.
+   - Data involved: the text and image content you submit for those features.
+   - These requests are sent through our backend rather than directly from your device.
+
+## Data Retention
+
+- Data stored in your personal Apple iCloud / CloudKit account may remain there until you delete it, delete app data, or remove it through your Apple account and device settings.
+- Backend request data is retained only as long as reasonably needed to operate the service, secure the app, troubleshoot issues, and comply with legal obligations.
+- Support emails are retained for as long as reasonably necessary to respond and maintain support history.
+
+## Security
+
+We use reasonable safeguards designed to protect information handled by CutIQ. These measures include encrypted network transport, Apple App Attest verification for supported devices, subscription verification, and backend controls intended to reduce abuse and unauthorized access. No method of transmission or storage is completely secure, so we cannot guarantee absolute security.
+
+## Your Choices and Rights
+
+You can:
+
+- stop granting camera or photo-library access through your iPhone settings;
+- disable notifications through iPhone settings or within the app;
+- manage or cancel subscriptions through Apple;
+- contact us to request help related to your data or privacy.
+
+If you want certain synced app data removed, contact us at support@cutiq.app and include enough information for us to understand your request.
+
+## Children's Privacy
+
+CutIQ is not directed to children under 13, and we do not knowingly collect personal information from children under 13.
+
+## International Transfers
+
+Depending on where you use the app and where our service providers operate, your information may be processed in countries other than your own.
+
+## App Tracking Transparency
+
+CutIQ does not track you across apps and websites owned by other companies for advertising purposes as defined by Apple's App Tracking Transparency framework.
+
+## Notifications
+
+If you enable reminders, CutIQ may schedule local notifications on your device for hair tips, routine reminders, and weekly check-ins. These notifications are managed through Apple notification services and your device settings.
+
+## Changes to This Policy
+
+We may update this Privacy Policy from time to time. If we make material changes, we will update the date at the top of this page.
+
+## Contact Us
+
+If you have privacy questions or requests, contact us at [support@cutiq.app](mailto:support@cutiq.app).

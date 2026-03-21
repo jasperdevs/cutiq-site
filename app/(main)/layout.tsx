@@ -8,50 +8,38 @@ import { EmailForm } from "@/components/email_form/email_form";
 import { Hero } from "@/components/hero/hero";
 import { MaterialSymbolsLink } from "@/components/material_symbols_link/material_symbols_link";
 import { Navbar } from "@/components/navbar/navbar";
-import { ThemeStyle } from "@/components/theme_style/theme_style";
-import "@/global.css";
-import { ThemeProvider } from "@/providers/theme_provider";
 import { Section } from "@/components/section/section";
+import { ThemeStyle } from "@/components/theme_style/theme_style";
+import { ThemeProvider } from "@/providers/theme_provider";
+import "@/global.css";
+
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://cutiq.app";
+const TITLE = "CutIQ - AI hair analysis, routines, and style previews";
+const DESCRIPTION =
+  "CutIQ helps you analyze your hair, track progress, build a routine, and preview new looks from your iPhone.";
 
 export const metadata: Metadata = {
-  /**
-   * `title` and `description` are visible in search results.
-   * Recommended length for title is max 60 characters.
-   * Recommended length for description is max 160 characters.
-   */
-  title: "Website title",
-  description: "Website description",
-
-  /**
-   * Your website URL.
-   */
-  metadataBase: new URL("https://app-website-url.com"),
-
-  /**
-   * Info inside `openGraph` and `twitter` is used to show rich previews
-   * on social media when someone shares a link to your website.
-   *
-   * AppView comes with a tool to help you generate an Open Graph image,
-   * run the dev server and go to `http://localhost:3000/open-graph-builder`.
-   */
+  title: TITLE,
+  description: DESCRIPTION,
+  metadataBase: new URL(SITE_URL),
   openGraph: {
-    title: "App title",
-    description: "App description",
-    url: "https://app-website-url.com",
+    title: TITLE,
+    description: DESCRIPTION,
+    url: SITE_URL,
     images: [
       {
         url: "/og-preview.png",
         width: 1200,
         height: 720,
-        alt: "",
+        alt: "CutIQ preview with hair analysis and style tools",
       },
     ],
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "App title",
-    description: "App description",
+    title: TITLE,
+    description: DESCRIPTION,
     images: ["/og-preview.png"],
   },
 };
@@ -69,7 +57,6 @@ export default function RootLayout({
   return (
     <html lang="en" data-theme={THEME}>
       <head>
-        {/* This makes Safari on iOS show the App Store download banner */}
         {!IS_WAITLIST_ENABLED && (
           <meta name="apple-itunes-app" content={`app-id=${APP_ID}`} />
         )}
@@ -84,48 +71,30 @@ export default function RootLayout({
           {!IS_WAITLIST_ENABLED && (
             <>
               <Navbar
-                icon={<AppIcon src="/app_view/icon_placeholder.png" />}
-                appName="App Name"
+                icon={<AppIcon src="/cutiq/app-icon.png" />}
+                appName="CutIQ"
                 links={[
                   { label: "Features", href: "#features" },
-                  // Uncomment the line below once you're ready to start using Release Notes
-                  // { label: "Release Notes", href: "/release-notes" },
-                  { label: "Contact", href: "mailto:your.email@gmail.com" },
+                  { label: "Privacy", href: "/privacy" },
+                  { label: "Contact", href: "mailto:support@cutiq.app" },
                 ]}
                 action={<DownloadActionButton />}
               />
 
               {children}
 
-              {/*
-                There is also a <MultiColumnFooter> component available
-                in case you need more space for links.
-              */}
               <CompactFooter
-                appIcon={
-                  <AppIcon
-                    src="/app_view/icon_placeholder.png"
-                    filter="grayscale"
-                  />
-                }
+                appIcon={<AppIcon src="/cutiq/app-icon.png" filter="grayscale" />}
                 links={[
                   { label: "Privacy", href: "/privacy" },
-                  {
-                    label: "Terms of Use",
-                    href: "https://www.apple.com/legal/internet-services/itunes/dev/stdeula/",
-                    external: true,
-                  },
-                  {
-                    label: "Follow Updates",
-                    href: "https://your-social-media.com",
-                  },
+                  { label: "Terms", href: "/terms" },
+                  { label: "Support", href: "mailto:support@cutiq.app" },
                 ]}
-                footnoteLeading={`© ${new Date().getFullYear()}. All rights reserved.`}
+                footnoteLeading={`© ${new Date().getFullYear()} CutIQ. All rights reserved.`}
                 footnoteTrailing={
-                  // I'd appreciate if you leave this link here, but feel free to remove it, no hard feelings :)
                   <>
-                    Website is built with{" "}
-                    <a target="_blank" href="https://appview.dev">
+                    Built with{" "}
+                    <a target="_blank" href="https://appview.dev" rel="noopener noreferrer">
                       AppView
                     </a>
                   </>
@@ -137,40 +106,29 @@ export default function RootLayout({
           {IS_WAITLIST_ENABLED && (
             <Section paddingTop={60}>
               <Hero
-                title="App Title"
-                subtitle="Short app description that highlights what the app does and its key value"
+                title="CutIQ"
+                subtitle="AI-powered hair analysis, style previews, and routines that make progress easier to see and easier to keep."
                 media={
                   <Hero.Image
-                    src="/app_view/screenshot_placeholder.png"
-                    alt=""
+                    src="/cutiq/style-man-bun.jpg"
+                    alt="CutIQ hairstyle preview on iPhone"
                     bezel="iPhone 17 Black"
                   />
                 }
                 action={
-                  <>
-                    <EmailForm
-                      providerConfig={{
-                        provider: "loops",
-                        config: {
-                          formId: "your-loops-form-id",
-                        },
-                      }}
-                    />
-                    {/*
-                      You can also use a simple button to redirect users
-                      to a custom page where you collect emails
-                    */}
-                    {/* <GetNotifiedActionButton href="your-email-form-link" /> */}
-                  </>
+                  <EmailForm
+                    providerConfig={{
+                      provider: "loops",
+                      config: {
+                        formId: "replace-with-your-loops-form-id",
+                      },
+                    }}
+                  />
                 }
               />
             </Section>
           )}
         </ThemeProvider>
-
-        {/* <PlausibleAnalytics domain="your-app-domain.com" /> */}
-        {/* <TelemetryDeckAnalytics appID="your-telemetrydeck-app-id" clientUser="anonymous" /> */}
-        {/* <VercelAnalytics /> */}
       </body>
     </html>
   );

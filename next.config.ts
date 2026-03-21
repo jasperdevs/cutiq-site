@@ -1,8 +1,14 @@
 import createMDX from "@next/mdx";
 import type { NextConfig } from "next";
 
+const repoName = process.env.GITHUB_REPOSITORY?.split("/")[1] ?? "";
+const shouldUseBasePath = process.env.GITHUB_ACTIONS === "true" && repoName !== "" && repoName !== `${process.env.GITHUB_ACTOR}.github.io`;
+const basePath = shouldUseBasePath ? `/${repoName}` : "";
+
 const nextConfig: NextConfig = {
   output: "export", // Enables static export
+  basePath,
+  assetPrefix: basePath || undefined,
   images: { unoptimized: true },
   pageExtensions: ["js", "jsx", "md", "mdx", "ts", "tsx"],
   turbopack: {
