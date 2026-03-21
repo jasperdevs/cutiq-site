@@ -66,7 +66,7 @@ export default function RootLayout({
       <body>
         <ThemeProvider>
           <Navbar
-            icon={<AppIcon src="/cutiq/app-icon.png" mask />}
+            icon={<AppIcon src="/cutiq/app-icon-dark.png" mask />}
             appName="CutIQ"
             links={[
               { label: "Features", href: "#features" },
@@ -79,7 +79,7 @@ export default function RootLayout({
           {children}
 
           <CompactFooter
-            appIcon={<AppIcon src="/cutiq/app-icon.png" mask filter="grayscale" />}
+            appIcon={<AppIcon src="/cutiq/app-icon-dark.png" mask filter="grayscale" />}
             links={[
               { label: "Privacy", href: "/privacy" },
               { label: "Terms", href: "/terms" },
