@@ -13,6 +13,7 @@
   border-radius: 12px;
   overflow: hidden;
   min-height: 0;
+  position: relative;
 }
 
 .photo img {
@@ -20,4 +21,18 @@
   height: 100%;
   object-fit: cover;
   object-position: center 20%;
+}
+
+.label {
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 12px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+  background: rgba(0, 0, 0, 0.4);
+  padding: 3px 10px;
+  border-radius: 100px;
+  backdrop-filter: blur(4px);
 }

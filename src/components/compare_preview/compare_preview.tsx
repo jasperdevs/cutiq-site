@@ -19,6 +19,7 @@ export function ComparePreview({ leftSrc, rightSrc }: ComparePreviewProps) {
           loading="lazy"
           decoding="async"
         />
+        <span className={styles.label}>Before</span>
       </div>
       <div className={styles.photo}>
         <img
@@ -27,6 +28,7 @@ export function ComparePreview({ leftSrc, rightSrc }: ComparePreviewProps) {
           loading="lazy"
           decoding="async"
         />
+        <span className={styles.label}>After</span>
       </div>
     </div>
   );

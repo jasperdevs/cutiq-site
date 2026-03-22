@@ -35,7 +35,7 @@ export default function Page() {
           />
         </CardGrid>
 
-        <CardGrid rowHeight={400}>
+        <CardGrid rowHeight={440}>
           <CardGrid.StackedCard
             maxWidth="half"
             title="Save and compare"
