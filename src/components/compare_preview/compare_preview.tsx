@@ -12,29 +12,25 @@ interface ComparePreviewProps {
 export function ComparePreview({ leftSrc, rightSrc }: ComparePreviewProps) {
   return (
     <div className={styles.wrapper}>
-      <div className={styles.column}>
+      <div className={styles.photo}>
+        <img
+          src={withBasePath(leftSrc)}
+          alt="Original look"
+          loading="lazy"
+          decoding="async"
+          draggable={false}
+        />
         <span className={styles.label}>Before</span>
-        <div className={styles.photo}>
-          <img
-            src={withBasePath(leftSrc)}
-            alt="Original look"
-            loading="lazy"
-            decoding="async"
-            draggable={false}
-          />
-        </div>
       </div>
-      <div className={styles.column}>
+      <div className={styles.photo}>
+        <img
+          src={withBasePath(rightSrc)}
+          alt="Generated style"
+          loading="lazy"
+          decoding="async"
+          draggable={false}
+        />
         <span className={styles.label}>After</span>
-        <div className={styles.photo}>
-          <img
-            src={withBasePath(rightSrc)}
-            alt="Generated style"
-            loading="lazy"
-            decoding="async"
-            draggable={false}
-          />
-        </div>
       </div>
     </div>
   );
