@@ -6,7 +6,7 @@ import { Hero } from "@/components/hero/hero";
 import { Section } from "@/components/section/section";
 import { StyleGallery } from "@/components/style_gallery/style_gallery";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://cutiq.app";
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://jasprcodess.github.io/cutiq-site";
 
 const jsonLd = {
   "@context": "https://schema.org",
