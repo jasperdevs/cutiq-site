@@ -58,8 +58,6 @@ export default function RootLayout({
           <meta name="apple-itunes-app" content={`app-id=${APP_ID}`} />
         )}
 
-        <link rel="icon" href="/favicon.png" type="image/png" sizes="48x48" />
-
         <ThemeStyle />
         <MaterialSymbolsLink />
       </head>

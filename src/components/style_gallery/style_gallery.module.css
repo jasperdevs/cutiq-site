@@ -3,119 +3,16 @@
   width: 100%;
   height: 100%;
   overflow: hidden;
+  user-select: none;
+  -webkit-user-select: none;
 }
 
-/* Blow up the rotated area so tiles fill edges even after rotation */
-.rotated {
-  position: absolute;
-  inset: -40%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transform: rotate(-12deg);
-}
-
-.scrollContainer {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-
-/* Two identical tile sets stacked. Scroll exactly -50% for seamless loop. */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(6, 110px);
-  gap: 8px;
-  justify-content: center;
-  animation: scrollUp 40s linear infinite;
-}
-
-@keyframes scrollUp {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(-50%);
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .grid {
-    animation: none;
-  }
-}
-
-.tile {
-  width: 110px;
-  height: 146px;
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-.tile img {
+.mosaic {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-
-/* Fades */
-.fadeTop,
-.fadeBottom {
-  position: absolute;
-  left: 0;
-  right: 0;
-  height: 30%;
-  z-index: 1;
+  object-position: center center;
   pointer-events: none;
-}
-
-.fadeTop {
-  top: 0;
-  background: linear-gradient(
-    to bottom,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(255, 255, 255, 0.6) 45%,
-    rgba(255, 255, 255, 0) 100%
-  );
-}
-
-.fadeBottom {
-  bottom: 0;
-  background: linear-gradient(
-    to top,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(255, 255, 255, 0.6) 45%,
-    rgba(255, 255, 255, 0) 100%
-  );
-}
-
-.fadeLeft,
-.fadeRight {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  z-index: 1;
-  pointer-events: none;
-}
-
-.fadeLeft {
-  left: 0;
-  width: 20%;
-  background: linear-gradient(
-    to right,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(255, 255, 255, 0.5) 50%,
-    rgba(255, 255, 255, 0) 100%
-  );
-}
-
-.fadeRight {
-  right: 0;
-  width: 20%;
-  background: linear-gradient(
-    to left,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(255, 255, 255, 0.5) 50%,
-    rgba(255, 255, 255, 0) 100%
-  );
+  user-select: none;
+  -webkit-user-drag: none;
 }
