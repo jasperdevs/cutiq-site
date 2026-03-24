@@ -8,9 +8,9 @@ import styles from "./icon_card.module.css";
 interface IconCardProps {
   maxWidth: "third" | "half" | "twoThirds" | "full";
   iconName: (typeof MATERIAL_SYMBOLS)[number];
-  title: string;
+  title: React.ReactNode;
   titleFontStyle?: FontStyle;
-  description?: string;
+  description?: React.ReactNode;
 }
 
 export function IconCard({

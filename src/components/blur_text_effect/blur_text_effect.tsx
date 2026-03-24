@@ -1,6 +1,6 @@
 "use client";
 
-import { useLayoutEffect, useRef, useState, useEffect } from "react";
+import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import styles from "./blur_text_effect.module.css";
 
@@ -12,14 +12,30 @@ interface BlurTextEffectProps {
 
 export function BlurTextEffect({ children, className = "", delay = 0 }: BlurTextEffectProps) {
   const containerRef = useRef<HTMLSpanElement>(null);
-  const [mounted, setMounted] = useState(false);
+  const [triggered, setTriggered] = useState(false);
 
+  // Observe when element enters viewport
   useEffect(() => {
-    setMounted(true);
+    const el = containerRef.current;
+    if (!el) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setTriggered(true);
+          observer.unobserve(el);
+        }
+      },
+      { threshold: 0.2 }
+    );
+
+    observer.observe(el);
+    return () => observer.disconnect();
   }, []);
 
-  useLayoutEffect(() => {
-    if (!mounted || !containerRef.current) return;
+  // Animate when triggered
+  useEffect(() => {
+    if (!triggered || !containerRef.current) return;
 
     const chars = containerRef.current.querySelectorAll(`.${styles.char}`);
 
@@ -35,7 +51,7 @@ export function BlurTextEffect({ children, className = "", delay = 0 }: BlurText
       delay: delay / 1000,
       clearProps: "filter",
     });
-  }, [mounted, children, delay]);
+  }, [triggered, children, delay]);
 
   return (
     <span className={`${styles.container} ${className}`} ref={containerRef}>
@@ -43,7 +59,7 @@ export function BlurTextEffect({ children, className = "", delay = 0 }: BlurText
         <span
           key={`${char}-${i}`}
           className={styles.char}
-          style={mounted ? undefined : { opacity: 1 }}
+          style={triggered ? undefined : { opacity: 1 }}
         >
           {char === " " ? "\u00A0" : char}
         </span>

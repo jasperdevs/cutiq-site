@@ -7,9 +7,9 @@ import styles from "./stacked_card.module.css";
 
 interface StackedCardProps {
   maxWidth: "third" | "half" | "twoThirds" | "full";
-  title: string;
+  title: React.ReactNode;
   titleFontStyle?: FontStyle;
-  description?: string;
+  description?: React.ReactNode;
   media: React.ReactNode;
   textAlignment?: "leading" | "center" | "trailing";
   layoutDirection?: "forward" | "reverse";

@@ -13,9 +13,9 @@ interface OverlaidCardProps {
   imageSrc: string;
   imageSrcset?: ImageSrcsetEntry[];
   imageObjectPosition?: string;
-  title: string;
+  title: React.ReactNode;
   titleFontStyle?: FontStyle;
-  description?: string;
+  description?: React.ReactNode;
   textAlignment?:
     | "center"
     | "topLeading"

@@ -168,8 +168,8 @@ export default function Page() {
         <CardGrid rowHeight={480}>
           <CardGrid.StackedCard
             maxWidth="full"
-            title="Try any style"
-            description="30+ looks generated on your actual face."
+            title={<BlurTextEffect>Try any style</BlurTextEffect>}
+            description={<BlurTextEffect delay={100}>30+ looks generated on your actual face.</BlurTextEffect>}
             media={<StyleGallery />}
             layoutDirection="reverse"
           />
@@ -178,8 +178,8 @@ export default function Page() {
         <CardGrid rowHeight={500}>
           <CardGrid.StackedCard
             maxWidth="half"
-            title="Save and compare"
-            description="Keep the looks you like. Show your barber."
+            title={<BlurTextEffect>Save and compare</BlurTextEffect>}
+            description={<BlurTextEffect delay={100}>Keep the looks you like. Show your barber.</BlurTextEffect>}
             media={
               <ComparePreview
                 leftSrc="/cutiq/style-buzz-cut.jpg"
@@ -193,8 +193,8 @@ export default function Page() {
             maxWidth="half"
             imageSrc="/cutiq/hair-score.jpg"
             imageObjectPosition="center 40%"
-            title="Know your hair score"
-            description="Type, texture, density, and face shape in seconds."
+            title={<BlurTextEffect>Know your hair score</BlurTextEffect>}
+            description={<BlurTextEffect delay={100}>Type, texture, density, and face shape in seconds.</BlurTextEffect>}
             textAlignment="bottomLeading"
           />
         </CardGrid>
@@ -203,22 +203,22 @@ export default function Page() {
           <CardGrid.IconCard
             maxWidth="third"
             iconName="target"
-            title="Weekly routine"
-            description="Products, timing, and progress tracking."
+            title={<BlurTextEffect>Weekly routine</BlurTextEffect>}
+            description={<BlurTextEffect delay={100}>Products, timing, and progress tracking.</BlurTextEffect>}
           />
 
           <CardGrid.IconCard
             maxWidth="third"
             iconName="send"
-            title="AI hair chat"
-            description="Knows your score and routine."
+            title={<BlurTextEffect>AI hair chat</BlurTextEffect>}
+            description={<BlurTextEffect delay={100}>Knows your score and routine.</BlurTextEffect>}
           />
 
           <CardGrid.IconCard
             maxWidth="third"
             iconName="lock"
-            title="No sign-up"
-            description="Works with iCloud."
+            title={<BlurTextEffect>No sign-up</BlurTextEffect>}
+            description={<BlurTextEffect delay={100}>Works with iCloud.</BlurTextEffect>}
           />
         </CardGrid>
       </Section>
@@ -239,7 +239,7 @@ export default function Page() {
             lineHeight: 1.2,
             letterSpacing: "-0.02em",
           }}>
-            Questions
+            <BlurTextEffect>Questions</BlurTextEffect>
           </h2>
           <div style={{ width: "100%" }}>
             <FAQ items={FAQ_ITEMS} />
@@ -269,7 +269,7 @@ export default function Page() {
             color: "var(--color-text-secondary)",
             maxWidth: "360px",
           }}>
-            Free to try. No account needed.
+            <BlurTextEffect delay={100}>Free to try. No account needed.</BlurTextEffect>
           </p>
           <div style={{ marginTop: "8px" }}>
             <DownloadActionButton size="medium" label="Download on the App Store" />
