@@ -179,7 +179,7 @@ export default function Page() {
           <CardGrid.StackedCard
             maxWidth="half"
             title={<BlurTextEffect>Save and compare</BlurTextEffect>}
-            description={<BlurTextEffect delay={100}>Keep the looks you like. Show your barber.</BlurTextEffect>}
+            description={<BlurTextEffect delay={100}>Save your favorites. Show your barber.</BlurTextEffect>}
             media={
               <ComparePreview
                 leftSrc="/cutiq/style-buzz-cut.jpg"
