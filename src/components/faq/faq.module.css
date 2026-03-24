@@ -1,44 +1,42 @@
-.accordion {
+.root {
   width: 100%;
   max-width: var(--base-width);
 }
 
 .item {
-  width: 100%;
   border-bottom: 1px solid var(--color-fill-2);
 }
 
 .header {
   display: flex;
-  width: 100%;
   margin: 0;
 }
 
 .trigger {
   display: flex;
-  width: 100%;
+  flex: 1;
   align-items: center;
   justify-content: space-between;
   gap: 16px;
-  padding: 20px 0;
+  padding: 16px 0;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.5;
   text-align: left;
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 1.4;
   color: var(--color-text-primary);
   background: none;
   border: none;
   cursor: pointer;
-  transition: opacity 0.15s ease;
+  transition: all 0.15s ease;
 }
 
 .trigger:hover {
-  opacity: 0.7;
+  text-decoration: underline;
 }
 
 .chevron {
   flex-shrink: 0;
-  opacity: 0.4;
+  color: var(--color-text-secondary);
   transition: transform 0.2s ease;
 }
 
@@ -48,24 +46,24 @@
 
 .content {
   overflow: hidden;
-  font-size: 15px;
-  line-height: 1.6;
+  font-size: 14px;
+  line-height: 1.7;
   color: var(--color-text-secondary);
 }
 
 .content[data-state="open"] {
-  animation: accordionDown 0.2s ease-out;
+  animation: slideDown 0.2s ease-out;
 }
 
 .content[data-state="closed"] {
-  animation: accordionUp 0.2s ease-out;
+  animation: slideUp 0.2s ease-out;
 }
 
-.contentInner {
-  padding: 0 0 20px 0;
+.contentText {
+  padding-bottom: 16px;
 }
 
-@keyframes accordionDown {
+@keyframes slideDown {
   from {
     height: 0;
   }
@@ -74,7 +72,7 @@
   }
 }
 
-@keyframes accordionUp {
+@keyframes slideUp {
   from {
     height: var(--radix-accordion-content-height);
   }

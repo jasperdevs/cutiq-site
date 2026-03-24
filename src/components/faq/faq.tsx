@@ -15,69 +15,39 @@ interface FAQProps {
 
 export function FAQ({ items }: FAQProps) {
   return (
-    <AccordionPrimitive.Root type="single" collapsible className={styles.accordion}>
+    <AccordionPrimitive.Root type="single" collapsible className={styles.root}>
       {items.map((item, i) => (
-        <AccordionItem key={i} value={`item-${i}`}>
-          <AccordionTrigger>{item.question}</AccordionTrigger>
-          <AccordionContent>{item.answer}</AccordionContent>
-        </AccordionItem>
+        <AccordionPrimitive.Item key={i} value={`item-${i}`} className={styles.item}>
+          <AccordionPrimitive.Header className={styles.header}>
+            <AccordionPrimitive.Trigger className={styles.trigger}>
+              {item.question}
+              <ChevronDown />
+            </AccordionPrimitive.Trigger>
+          </AccordionPrimitive.Header>
+          <AccordionPrimitive.Content className={styles.content}>
+            <div className={styles.contentText}>{item.answer}</div>
+          </AccordionPrimitive.Content>
+        </AccordionPrimitive.Item>
       ))}
     </AccordionPrimitive.Root>
   );
 }
 
-const AccordionItem = forwardRef<
-  HTMLDivElement,
-  AccordionPrimitive.AccordionItemProps
->(({ className, ...props }, ref) => (
-  <AccordionPrimitive.Item
-    ref={ref}
-    className={`${styles.item} ${className ?? ""}`}
-    {...props}
-  />
-));
-AccordionItem.displayName = "AccordionItem";
-
-const AccordionTrigger = forwardRef<
-  HTMLButtonElement,
-  AccordionPrimitive.AccordionTriggerProps
->(({ children, className, ...props }, ref) => (
-  <AccordionPrimitive.Header className={styles.header}>
-    <AccordionPrimitive.Trigger
-      ref={ref}
-      className={`${styles.trigger} ${className ?? ""}`}
-      {...props}
+function ChevronDown() {
+  return (
+    <svg
+      className={styles.chevron}
+      xmlns="http://www.w3.org/2000/svg"
+      width="16"
+      height="16"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     >
-      {children}
-      <svg
-        className={styles.chevron}
-        width="16"
-        height="16"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        aria-hidden="true"
-      >
-        <polyline points="6 9 12 15 18 9" />
-      </svg>
-    </AccordionPrimitive.Trigger>
-  </AccordionPrimitive.Header>
-));
-AccordionTrigger.displayName = "AccordionTrigger";
-
-const AccordionContent = forwardRef<
-  HTMLDivElement,
-  AccordionPrimitive.AccordionContentProps
->(({ children, className, ...props }, ref) => (
-  <AccordionPrimitive.Content
-    ref={ref}
-    className={`${styles.content} ${className ?? ""}`}
-    {...props}
-  >
-    <div className={styles.contentInner}>{children}</div>
-  </AccordionPrimitive.Content>
-));
-AccordionContent.displayName = "AccordionContent";
+      <path d="m6 9 6 6 6-6" />
+    </svg>
+  );
+}
