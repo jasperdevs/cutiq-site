@@ -118,7 +118,7 @@ export function GradientBackground() {
       className={styles.wrapper}
       style={{
         background:
-          "radial-gradient(125% 125% at 50% 101%, rgba(180,180,180,1) 0%, rgba(200,200,200,1) 12%, rgba(210,210,210,0.9) 20%, rgba(220,220,220,0.7) 30%, rgba(235,235,235,0.4) 50%, rgba(245,245,245,0.1) 70%, rgba(245,245,245,0) 100%)",
+          "radial-gradient(125% 125% at 50% 101%, rgba(120,120,120,1) 0%, rgba(150,150,150,1) 10%, rgba(170,170,170,0.95) 18%, rgba(190,190,190,0.8) 28%, rgba(210,210,210,0.5) 45%, rgba(230,230,230,0.2) 65%, rgba(245,245,245,0) 85%)",
       }}
     >
       <Noise
