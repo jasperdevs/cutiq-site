@@ -4,7 +4,6 @@ import { ComparePreview } from "@/components/compare_preview/compare_preview";
 import { DownloadActionButton } from "@/components/download_action_button/download_action_button";
 import { FAQ } from "@/components/faq/faq";
 import { Hero } from "@/components/hero/hero";
-import { ScrollReveal } from "@/components/scroll_reveal/scroll_reveal";
 import { Section } from "@/components/section/section";
 import { StyleGallery } from "@/components/style_gallery/style_gallery";
 
@@ -151,140 +150,128 @@ export default function Page() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <Section paddingTop={80}>
-        <ScrollReveal>
-          <Hero
-            title={<><BlurTextEffect>Your hair, </BlurTextEffect><em><BlurTextEffect delay={200}>analyzed.</BlurTextEffect></em></>}
-            subtitle="AI-powered hair health scores, custom routines, and style previews on your face."
-            media={
-              <Hero.Video
-                src="/cutiq/hero-demo.mp4"
-                bezel="iPhone 17 Black"
-                alt="CutIQ app showing AI hairstyle preview and hair analysis on iPhone"
-              />
-            }
-            action={<DownloadActionButton size="medium" label="Download on the App Store" />}
-          />
-        </ScrollReveal>
+        <Hero
+          title={<><BlurTextEffect>Your hair, </BlurTextEffect><em><BlurTextEffect delay={200}>analyzed.</BlurTextEffect></em></>}
+          subtitle="AI-powered hair health scores, custom routines, and style previews on your face."
+          media={
+            <Hero.Video
+              src="/cutiq/hero-demo.mp4"
+              bezel="iPhone 17 Black"
+              alt="CutIQ app showing AI hairstyle preview and hair analysis on iPhone"
+            />
+          }
+          action={<DownloadActionButton size="medium" label="Download on the App Store" />}
+        />
       </Section>
 
       <Section navigationAnchor="features">
-        <ScrollReveal>
-          <CardGrid rowHeight={480}>
-            <CardGrid.StackedCard
-              maxWidth="full"
-              title="Try any style"
-              description="30+ looks generated on your actual face."
-              media={<StyleGallery />}
-              layoutDirection="reverse"
-            />
-          </CardGrid>
-        </ScrollReveal>
+        <CardGrid rowHeight={480}>
+          <CardGrid.StackedCard
+            maxWidth="full"
+            title="Try any style"
+            description="30+ looks generated on your actual face."
+            media={<StyleGallery />}
+            layoutDirection="reverse"
+          />
+        </CardGrid>
 
-        <ScrollReveal>
-          <CardGrid rowHeight={500}>
-            <CardGrid.StackedCard
-              maxWidth="half"
-              title="Save and compare"
-              description="Keep the looks you like. Show your barber."
-              media={
-                <ComparePreview
-                  leftSrc="/cutiq/style-buzz-cut.jpg"
-                  rightSrc="/cutiq/style-textured-fringe.jpg"
-                />
-              }
-              layoutDirection="forward"
-            />
+        <CardGrid rowHeight={500}>
+          <CardGrid.StackedCard
+            maxWidth="half"
+            title="Save and compare"
+            description="Keep the looks you like. Show your barber."
+            media={
+              <ComparePreview
+                leftSrc="/cutiq/style-buzz-cut.jpg"
+                rightSrc="/cutiq/style-textured-fringe.jpg"
+              />
+            }
+            layoutDirection="forward"
+          />
 
-            <CardGrid.OverlaidCard
-              maxWidth="half"
-              imageSrc="/cutiq/hair-score.jpg"
-              imageObjectPosition="center 40%"
-              title="Know your hair score"
-              description="Type, texture, density, and face shape in seconds."
-              textAlignment="bottomLeading"
-            />
-          </CardGrid>
-        </ScrollReveal>
+          <CardGrid.OverlaidCard
+            maxWidth="half"
+            imageSrc="/cutiq/hair-score.jpg"
+            imageObjectPosition="center 40%"
+            title="Know your hair score"
+            description="Type, texture, density, and face shape in seconds."
+            textAlignment="bottomLeading"
+          />
+        </CardGrid>
 
-        <ScrollReveal>
-          <CardGrid rowHeight={160}>
-            <CardGrid.IconCard
-              maxWidth="third"
-              iconName="target"
-              title="Weekly routine"
-              description="Products, timing, and progress tracking."
-            />
+        <CardGrid rowHeight={160}>
+          <CardGrid.IconCard
+            maxWidth="third"
+            iconName="target"
+            title="Weekly routine"
+            description="Products, timing, and progress tracking."
+          />
 
-            <CardGrid.IconCard
-              maxWidth="third"
-              iconName="send"
-              title="AI hair chat"
-              description="Knows your score and routine."
-            />
+          <CardGrid.IconCard
+            maxWidth="third"
+            iconName="send"
+            title="AI hair chat"
+            description="Knows your score and routine."
+          />
 
-            <CardGrid.IconCard
-              maxWidth="third"
-              iconName="lock"
-              title="No sign-up"
-              description="Works with iCloud."
-            />
-          </CardGrid>
-        </ScrollReveal>
+          <CardGrid.IconCard
+            maxWidth="third"
+            iconName="lock"
+            title="No sign-up"
+            description="Works with iCloud."
+          />
+        </CardGrid>
       </Section>
 
-      <ScrollReveal>
-        <Section paddingTop={60} paddingBottom={60}>
-          <div style={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            gap: "24px",
-            padding: "0 20px",
+      <Section paddingTop={60} paddingBottom={60}>
+        <div style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          gap: "24px",
+          padding: "0 20px",
+        }}>
+          <h2 style={{
+            fontSize: "24px",
+            fontWeight: 700,
+            lineHeight: 1.2,
+            letterSpacing: "-0.02em",
           }}>
-            <h2 style={{
-              fontSize: "24px",
-              fontWeight: 700,
-              lineHeight: 1.2,
-              letterSpacing: "-0.02em",
-            }}>
-              Questions
-            </h2>
-            <FAQ items={FAQ_ITEMS} />
-          </div>
-        </Section>
-      </ScrollReveal>
+            Questions
+          </h2>
+          <FAQ items={FAQ_ITEMS} />
+        </div>
+      </Section>
 
-      <ScrollReveal>
-        <Section paddingTop={40} paddingBottom={60}>
-          <div style={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            gap: "16px",
-            textAlign: "center",
-            padding: "0 20px",
+      <Section paddingTop={40} paddingBottom={60}>
+        <div style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          gap: "16px",
+          textAlign: "center",
+          padding: "0 20px",
+        }}>
+          <h2 style={{
+            fontSize: "28px",
+            fontWeight: 700,
+            lineHeight: 1.2,
+            letterSpacing: "-0.02em",
           }}>
-            <h2 style={{
-              fontSize: "28px",
-              fontWeight: 700,
-              lineHeight: 1.2,
-              letterSpacing: "-0.02em",
-            }}>
-              <BlurTextEffect>See what works for you.</BlurTextEffect>
-            </h2>
-            <p style={{
-              fontSize: "16px",
-              color: "var(--color-text-secondary)",
-              maxWidth: "360px",
-            }}>
-              Free to try. No account needed.
-            </p>
-            <div style={{ marginTop: "8px" }}>
-              <DownloadActionButton size="medium" label="Download on the App Store" />
-            </div>
+            <BlurTextEffect>See what works for you.</BlurTextEffect>
+          </h2>
+          <p style={{
+            fontSize: "16px",
+            color: "var(--color-text-secondary)",
+            maxWidth: "360px",
+          }}>
+            Free to try. No account needed.
+          </p>
+          <div style={{ marginTop: "8px" }}>
+            <DownloadActionButton size="medium" label="Download on the App Store" />
           </div>
-        </Section>
-      </ScrollReveal>
+        </div>
+      </Section>
     </>
   );
 }
