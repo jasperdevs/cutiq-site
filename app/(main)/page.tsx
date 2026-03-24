@@ -2,10 +2,38 @@ import { BlurTextEffect } from "@/components/blur_text_effect/blur_text_effect";
 import { CardGrid } from "@/components/card_grid/card_grid";
 import { ComparePreview } from "@/components/compare_preview/compare_preview";
 import { DownloadActionButton } from "@/components/download_action_button/download_action_button";
+import { FAQ } from "@/components/faq/faq";
 import { Hero } from "@/components/hero/hero";
 import { ScrollReveal } from "@/components/scroll_reveal/scroll_reveal";
 import { Section } from "@/components/section/section";
 import { StyleGallery } from "@/components/style_gallery/style_gallery";
+
+const FAQ_ITEMS = [
+  {
+    question: "What is CutIQ?",
+    answer: "An AI-powered hair analysis app for iPhone. Get your hair health score, preview hairstyles on your face, and follow personalized routines.",
+  },
+  {
+    question: "How does the hairstyle preview work?",
+    answer: "Take a selfie or pick a photo. CutIQ generates realistic previews of 30+ hairstyles on your actual face, considering your face shape and features.",
+  },
+  {
+    question: "How does hair analysis work?",
+    answer: "You take photos from multiple angles. AI analyzes your hair density, texture, and condition, then gives you a score with specific recommendations.",
+  },
+  {
+    question: "Is CutIQ free?",
+    answer: "Free to download. Premium features like unlimited hairstyle generations and detailed analysis are available starting at $4.99/week or $29.99/year.",
+  },
+  {
+    question: "Does it work for all hair types?",
+    answer: "Yes. Straight, wavy, curly, coily. All hair types, textures, and conditions.",
+  },
+  {
+    question: "Is my data private?",
+    answer: "Your data stays on your device and in your private iCloud account. Photos are processed by AI and not stored on our servers. No account or email required.",
+  },
+];
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://jasperdevs.github.io/cutiq-site";
 
@@ -217,6 +245,28 @@ export default function Page() {
           </CardGrid>
         </ScrollReveal>
       </Section>
+
+      <ScrollReveal>
+        <Section paddingTop={60} paddingBottom={60}>
+          <div style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            gap: "24px",
+            padding: "0 20px",
+          }}>
+            <h2 style={{
+              fontSize: "24px",
+              fontWeight: 700,
+              lineHeight: 1.2,
+              letterSpacing: "-0.02em",
+            }}>
+              Questions
+            </h2>
+            <FAQ items={FAQ_ITEMS} />
+          </div>
+        </Section>
+      </ScrollReveal>
 
       <ScrollReveal>
         <Section paddingTop={40} paddingBottom={60}>
