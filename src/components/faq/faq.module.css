@@ -1,6 +1,6 @@
 .accordion {
   width: 100%;
-  max-width: 640px;
+  max-width: var(--base-width);
 }
 
 .item {

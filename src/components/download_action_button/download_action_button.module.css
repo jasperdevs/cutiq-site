@@ -2,19 +2,39 @@
   &:link,
   &:visited {
     display: block;
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
     color: var(--color-text-accent-brand);
     background-color: var(--color-accent-brand);
     border-radius: 980px;
     border: none;
-    transition: transform 0.15s ease-in-out;
+    transition: transform 0.2s ease, color 0.4s ease;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    translate: 150% 150%;
+    scale: 2.5;
+    border-radius: 50%;
+    background-color: #ffffff;
+    transition: translate 0.8s cubic-bezier(0.16, 1, 0.3, 1);
   }
 
   &:hover {
-    transform: scale(1.03);
+    transform: scale(1.05);
+    color: #000000;
+  }
+
+  &:hover::before {
+    translate: 0% 0%;
   }
 
   &:active {
-    transform: scale(0.97);
+    transform: scale(0.95);
   }
 
   .label {
@@ -28,6 +48,11 @@
   .appleLogo {
     position: relative;
     top: -1px;
+    transition: filter 0.4s ease;
+  }
+
+  &:hover .appleLogo {
+    filter: invert(1);
   }
 
   .downloadLabel {
