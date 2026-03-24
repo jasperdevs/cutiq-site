@@ -33,7 +33,7 @@
 
 ## Links
 
-- Website: https://jasprcodess.github.io/cutiq-site/
-- Privacy Policy: https://jasprcodess.github.io/cutiq-site/privacy
-- Terms: https://jasprcodess.github.io/cutiq-site/terms
+- Website: https://jasperdevs.github.io/cutiq-site/
+- Privacy Policy: https://jasperdevs.github.io/cutiq-site/privacy
+- Terms: https://jasperdevs.github.io/cutiq-site/terms
 - Contact: jasprcodes@gmail.com

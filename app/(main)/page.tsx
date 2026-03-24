@@ -6,7 +6,7 @@ import { Hero } from "@/components/hero/hero";
 import { Section } from "@/components/section/section";
 import { StyleGallery } from "@/components/style_gallery/style_gallery";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://jasprcodess.github.io/cutiq-site";
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://jasperdevs.github.io/cutiq-site";
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -161,7 +161,7 @@ export default function Page() {
           />
         </CardGrid>
 
-        <CardGrid rowHeight={440}>
+        <CardGrid rowHeight={500}>
           <CardGrid.StackedCard
             maxWidth="half"
             title="Save and compare"
@@ -177,13 +177,13 @@ export default function Page() {
 
           <CardGrid.StackedCard
             maxWidth="half"
-            title="Four photos. Real feedback."
-            description="Health score, face shape, and what to do next."
+            title="Know your hair score"
+            description="Type, texture, density, and face shape in seconds."
             media={
               <CoverImage
-                src="/cutiq/style-side-part.jpg"
-                alt="AI-generated side part hairstyle preview on user face"
-                objectPosition="center 20%"
+                src="/cutiq/hair-score.jpg"
+                alt="CutIQ hair analysis showing 8.5 score with hair profile details"
+                objectPosition="center 30%"
               />
             }
             layoutDirection="forward"

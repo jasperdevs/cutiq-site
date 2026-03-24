@@ -10,7 +10,7 @@ import { ThemeStyle } from "@/components/theme_style/theme_style";
 import { ThemeProvider } from "@/providers/theme_provider";
 import "@/global.css";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://jasprcodess.github.io/cutiq-site";
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://jasperdevs.github.io/cutiq-site";
 const TITLE = "CutIQ | Download Today";
 const OG_TITLE = "CutIQ — AI Hair Analysis & Hairstyle Preview for iPhone";
 const DESCRIPTION =

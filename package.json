@@ -14,15 +14,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jasprcodess/cutiq-site.git"
+    "url": "git+https://github.com/jasperdevs/cutiq-site.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/jasprcodess/cutiq-site/issues"
+    "url": "https://github.com/jasperdevs/cutiq-site/issues"
   },
-  "homepage": "https://github.com/jasprcodess/cutiq-site#readme",
+  "homepage": "https://github.com/jasperdevs/cutiq-site#readme",
   "dependencies": {
     "@mdx-js/loader": "^3.1.1",
     "@mdx-js/react": "^3.1.1",
